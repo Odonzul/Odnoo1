@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Бүртгүүлэх - Todnoo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            background-image: url('assets/imgs/header.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: #695aa6;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid black;
+            border-radius: 15px;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        form {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            text-align: left;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select,
+        .gender-box {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .email-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
+        #email {
+            flex: 2;
+            padding-right: 5px;
+        }
+
+        #email-symbol {
+            color: #695aa6;
+            margin: 0 5px;
+        }
+
+        select {
+            flex: 1;
+            margin-left: 5px;
+        }
+
+        .gender-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .gender-box {
+            width: 48%;
+        }
+
+        .gender-container label {
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            color: #695aa6;
+        }
+
+        .gender-container input[type="radio"] {
+            display: none;
+        }
+
+        .gender-container label::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border: 2px solid #695aa6;
+            margin-right: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        #male:checked + label::before,
+        #female:checked + label::before {
+            content: "\2713";
+            color: #695aa6;
+        }
+
+        input[type="submit"] {
+            background-color: #695aa6;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4b408f;
+        }
+
+        @media (min-width: 600px) {
+            .section {
+                max-width: 600px;
+            }
+        }
+
+        .additional-links {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .additional-links a {
+            color: #695aa6;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+            <div class="container">
+                <a class="logo" href="index.html">Todnoo</a>
+            </div></nav>
+    </header>
+
+    <section class="section" id="register">
+        <div class="custom-container custom-text-center">
+            <h2>Бүртгүүлэх</h2>
+            <form>
+                <label for="username">Хэрэглэгчийн нэр:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Нууц үг:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Нууц үг давтах:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <label for="email">И-мэйл:</label>
+                <div class="email-container">
+                    <input type="text" id="email" name="email" required>
+                    <span id="email-symbol">@</span>
+                    <select>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                    </select>
+                </div>
+                <label for="gender">Хүйс:</label>
+                <div class="gender-container">
+                    <div class="gender-box">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Эр</label>
+                    </div>
+                    <div class="gender-box">
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Эм</label>
+                    </div>
+                </div>
+                <input type="submit" value="Бүртгүүлэх">
+            </form>
+            <div class="additional-links">
+                <a href="login.html">Нэвтрэх</a>
+                <span>|</span>
+                <a href="recover.html">Нууц үг мартсан</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
